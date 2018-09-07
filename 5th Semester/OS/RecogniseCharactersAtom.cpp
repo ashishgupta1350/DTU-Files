@@ -1,4 +1,5 @@
 #include<iostream>
+
 using namespace std;
 int main()
 {
@@ -32,16 +33,11 @@ int main()
 		else {
 			specialChar++;
 		}
-
-
 	}
-
 	cout<<"SpecialChar: "<<specialChar<<endl;
 	cout<<"Spaces: "<<spaces<<endl;
 	cout<<"countChar: "<<countChar<<endl;
 	cout<<"CountNum: "<<countNum<<endl;
 
 	return 0;
-
-
 }
