@@ -1,0 +1,1 @@
+Load the text files in TORA when prompted in menu, the data is loaded. Then solve accordingly
