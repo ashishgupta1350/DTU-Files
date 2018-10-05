@@ -26,3 +26,4 @@ int main()
 	cout<<*arr<<endl;
 	return 0;
 }
+city*ptr[10];

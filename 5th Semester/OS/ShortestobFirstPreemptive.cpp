@@ -32,11 +32,11 @@ bool comparitor(process p1, process p2)
 {
 	return p1.arrivalTime <= p2.arrivalTime;
 }
-bool pqComparitor(process p1,process p2)
-{
-	// return p1.
+// bool pqComparitor(process p1,process p2)
+// {
+// 	// return p1.
 	
-}
+// }
 int main()
 {
 	int n;
