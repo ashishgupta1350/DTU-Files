@@ -19,19 +19,20 @@ using namespace std;
 // 	return v;
 // }
 
-
 void* operator new(size_t size)
 {
-	void* p=malloc(size);
+	void *p=malloc(size);
 	return p;
-
 }
+
 void operator delete(void* p)
 {
-	free(p); // I believe I can fly
-
+	free(p);
 }
-class complex
+
+void* operator new(size_t size) {void* p=malloc(size); return p; }
+
+void operator delete(void* p) {free(p); } class complex
 {
 	int a;
 public:
@@ -63,8 +64,6 @@ public:
 	ostream & operator >>(istream& din,complex &c)
 	{
 		// correct done now
-
-
 	}
 };
 int main()

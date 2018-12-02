@@ -12,12 +12,12 @@ class Line {
 
    private:
       int *ptr;
+      // static int count=0;
 };
 
 // Member functions definitions including constructor
 Line::Line(int len) {
    cout << "Normal constructor allocating ptr" << endl;
-   
    // allocate memory for the pointer;
    ptr = new int;
    *ptr = len;
@@ -45,13 +45,15 @@ void display(Line obj) {
 // Main function for the program
 int main() {
    Line line(10);
-   cout<<"start============================================"<<endl;
+   // cout<<"start============================================"<<endl;
    Line l2=line;
-   cout<<"-------------------------"<<endl;
+   // cout<<"-------------------------"<<endl;
+   cout<<"------"<<endl;
+   l2=line;
+   cout<<"------"<<endl;
    Line l3(line);
-   cout<<"end=============================================="<<endl;
-   display(line);
-   display(l2);
+   // cout<<"end=============================================="<<endl;
+   // display(line); // note that this also invokes the copy constructor!
 
    return 0;
 }
