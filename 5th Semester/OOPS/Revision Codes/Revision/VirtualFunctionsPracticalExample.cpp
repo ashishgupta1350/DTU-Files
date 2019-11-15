@@ -13,6 +13,7 @@ public:
 	{
 		cout<<"Why me? I am not even called!"<<endl;
 	}
+	virtual void display()=0;
 };
 
 class book: public media{
@@ -28,7 +29,10 @@ public:
 	{
 		cout<<pages<<" "<<author<<" "<<title<<" "<<price<<endl;
 	}
-
+	void display()
+	{
+		cout<<"display"<<endl;
+	}
 
 };
 
@@ -40,6 +44,10 @@ public:
 	void showDetails()
 	{
 		cout<<length<<" "<<composer<<" "<<title<<" "<<price<<endl;
+	}
+	void display()
+	{
+		cout<<"display"<<endl;
 	}
 };
 int main()

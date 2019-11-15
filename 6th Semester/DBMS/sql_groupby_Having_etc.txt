@@ -1,0 +1,40 @@
+CREATE TABLE employee (id INTEGER PRIMARY KEY , firstname TEXT, lastname TEXT, salary INTEGER, city TEXT, officecode INTEGER);
+CREATE TABLE office(officecode INTEGER, country TEXT, city TEXT);
+
+INSERT INTO employee VALUES(1, "Ashish","gupta", 2000, "Delhi",20);
+INSERT INTO employee VALUES(2, "Aviral","Sharma", 1000,"Madras",30);
+INSERT INTO employee VALUES(3, "Ansh","Singh", 3000,"Delhi",10);
+INSERT INTO employee VALUES(4, "Nobody","Somebody", 1000,"Madras",30);
+
+INSERT INTO office VALUES(10, "India", "Delhi");
+INSERT INTO office VALUES(20, "India2","Delhi");
+INSERT INTO office VALUES(30, "China","Madras");
+
+
+-- SELECT * FROM EMPLOYEE where officecode IN (SELECT officecode from office where city = "Delhi");
+-- SELECT max(salary) FROM EMPLOYEE where officecode IN (SELECT officecode from office where city = "Delhi");
+
+-- SELECT avg(salary), firstname, lastname FROM EMPLOYEE where officecode IN (SELECT officecode from office where city = "Delhi");
+
+-- SELECT min(salary), firstname, lastname FROM employee where officecode in (SELECT officecode from office where city = "Madras");
+
+
+-- Order by
+-- Group by 
+-- Group by having
+-- Some
+-- All
+
+-- select firstname, lastname, salary from employee order by salary;
+select city,firstname,lastname, salary from employee group by city having salary>2000;
+
+select firstname, lastname, salary from employee where salary>=2000;
+
+
+-- -- select firstname, lastname, salary from employee where salary = some (select salary from employee where city = 'Delhi');
+
+-- select * from employee where salary> (select salary from employee where city = 'Madras');
+
+
+
+
